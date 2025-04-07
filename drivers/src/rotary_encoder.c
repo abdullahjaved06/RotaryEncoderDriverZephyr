@@ -331,19 +331,18 @@ static void log_button_states(uint32_t gpio_states)
 //     printk("Encoder interrupt enabled for encoder %d.\n", encoder);
 //     return 0;
 // }
-#define DEBOUNCE_TIME_MS 100 // adjust as needed
+#define DEBOUNCE_TIME_MS 3 // adjust as needed
 
 static int64_t last_interrupt_time = 0;
 void interrupt_handler(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
 {
-    int64_t now = k_uptime_get();
-    if ((now - last_interrupt_time) > DEBOUNCE_TIME_MS)
-    {
-        last_interrupt_time = now;
+    // int64_t now = k_uptime_get();
+    // if ((now - last_interrupt_time) > DEBOUNCE_TIME_MS)
+    // {
+        // last_interrupt_time = now;
         LOG_INF("Inerrupt Triggered.\n\r");
 
-        k_sem_give(&menu_sem); // Signal the semaphore to start the menu operation
-    }
+    // }
 }
 
 void gpios_interrupt_init()
