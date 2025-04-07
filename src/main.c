@@ -10,6 +10,9 @@
 #include "rotary_encoder.h"
 
 LOG_MODULE_REGISTER(ENCODER_DRIVER);
+#define interrupt_buton_alias DT_ALIAS(interruptpin)
+static const struct gpio_dt_spec ROTARY_ENC_INTERRUPT_PIN = GPIO_DT_SPEC_GET(interrupt_buton_alias, gpios); /*Calibration Button*/
+static struct gpio_callback int_callback;
 
 void main()
 {
