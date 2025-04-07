@@ -1,0 +1,19 @@
+{
+  "toolchainPath": "/home/abdullah/ncs/toolchains/7795df4459",
+  "sdkPath": "/home/abdullah/ncs/v2.5.0",
+  "board": "adafruit_feather_nrf52840",
+  "boardDirs": [
+    "/home/abdullah/ncs/v2.5.0/zephyr/boards/arm/adafruit_feather_nrf52840"
+  ],
+  "boardRevision": "",
+  "boardDir": "/home/abdullah/ncs/v2.5.0/zephyr/boards/arm/adafruit_feather_nrf52840",
+  "shouldBuild": true,
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": []
+}
